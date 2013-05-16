@@ -2,6 +2,9 @@ SidekiqDynamicPoc::Application.routes.draw do
 
   resources :projects
 
+  require 'sidekiq/web'
+  mount Sidekiq::Web, at: '/sidekiq'
+
   root :to => 'projects#index'
 
   # The priority is based upon order of creation:

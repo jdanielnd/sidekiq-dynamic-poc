@@ -5,8 +5,7 @@ class Project < ActiveRecord::Base
 
   def execute_tasks
     self.tasks.each do |task|
-      task.execute
-      task.save!
+      TaskWorker.perform_async(task.id)
     end
   end
 

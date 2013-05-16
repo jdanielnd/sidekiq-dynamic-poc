@@ -13,6 +13,9 @@ gem 'rails', '>= 3.2.11'
 gem 'simple_form'
 gem 'strong_parameters'
 gem 'thin'
+gem 'sidekiq'
+gem 'slim', '>= 1.3.8'
+gem 'sinatra'
 
 group :assets do
   gem 'sass-rails'

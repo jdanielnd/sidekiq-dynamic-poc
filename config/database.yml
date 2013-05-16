@@ -17,6 +17,7 @@ development:
   encoding: unicode
   database: sidekiq-dynamic-poc_development
   pool: 5
+  timeout: 5000
   username: tecto
   password:
 
