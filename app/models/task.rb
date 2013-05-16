@@ -3,7 +3,7 @@ class Task < ActiveRecord::Base
   belongs_to :project
 
   def execute
-    sleep 2
+    sleep 20
     self.done = true
   end
 end

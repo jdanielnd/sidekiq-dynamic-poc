@@ -13,9 +13,10 @@ gem 'rails', '>= 3.2.11'
 gem 'simple_form'
 gem 'strong_parameters'
 gem 'thin'
-gem 'sidekiq'
+gem 'sidekiq', '2.9.0'
 gem 'slim', '>= 1.3.8'
 gem 'sinatra'
+gem 'sidekiq-dynamic-queues'
 
 group :assets do
   gem 'sass-rails'

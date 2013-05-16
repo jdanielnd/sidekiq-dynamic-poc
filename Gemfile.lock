@@ -49,7 +49,8 @@ GEM
     capybara-webkit (0.14.2)
       capybara (~> 2.0, >= 2.0.2)
       json
-    celluloid (0.14.0)
+    celluloid (0.12.4)
+      facter (>= 1.6.12)
       timers (>= 1.0.0)
     childprocess (0.3.9)
       ffi (~> 1.0, >= 1.0.11)
@@ -70,6 +71,7 @@ GEM
     eventmachine (1.0.3)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    facter (1.7.1)
     factory_girl (4.2.0)
       activesupport (>= 3.0.0)
     factory_girl_rails (4.2.1)
@@ -179,12 +181,14 @@ GEM
       rack
     shoulda-matchers (2.1.0)
       activesupport (>= 3.0.0)
-    sidekiq (2.12.0)
-      celluloid (>= 0.14.0)
-      connection_pool (>= 1.0.0)
-      json
-      redis (>= 3.0)
+    sidekiq (2.9.0)
+      celluloid (~> 0.12.0)
+      connection_pool (~> 1.0)
+      multi_json (~> 1)
+      redis (~> 3)
       redis-namespace
+    sidekiq-dynamic-queues (0.5.4)
+      sidekiq (~> 2.9)
     simple_form (2.1.0)
       actionpack (~> 3.0)
       activemodel (~> 3.0)
@@ -255,7 +259,8 @@ DEPENDENCIES
   sass-rails
   sham_rack
   shoulda-matchers
-  sidekiq
+  sidekiq (= 2.9.0)
+  sidekiq-dynamic-queues
   simple_form
   simplecov
   sinatra
